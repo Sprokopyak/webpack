@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
-var MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 
@@ -21,7 +21,7 @@ module.exports = webpackMerge(commonConfig, {
  plugins: [
   new webpack.NoEmitOnErrorsPlugin(),
   new MiniCssExtractPlugin({
-   filename: "[name].[hash].css"
+   filename: '[name].[hash].css'
   }),
   new webpack.LoaderOptionsPlugin({
    htmlLoader: {
