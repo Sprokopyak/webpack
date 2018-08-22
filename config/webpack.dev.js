@@ -5,25 +5,25 @@ var helpers = require('./helpers');
 var webpack = require('webpack');
 
 module.exports = webpackMerge(commonConfig, {
- mode: 'development',
- devtool: 'cheap-module-eval-source-map',
+  mode: 'development',
+  devtool: 'cheap-module-eval-source-map',
 
- output: {
-  path: helpers.root('dist'),
-  publicPath: '/',
-  filename: '[name].js',
-  chunkFilename: '[id].chunk.js'
- },
+  output: {
+    path: helpers.root('dist'),
+    publicPath: '/',
+    filename: '[name].js',
+    chunkFilename: '[id].chunk.js'
+  },
 
- plugins: [
-  new MiniCssExtractPlugin({
-   filename: '[name].css'
-  }),
-  new webpack.NamedModulesPlugin()
- ],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
+    }),
+    new webpack.NamedModulesPlugin()
+  ],
 
- devServer: {
-  historyApiFallback: true,
-  stats: 'minimal'
- }
+  devServer: {
+    historyApiFallback: true,
+    stats: 'minimal'
+  }
 });
